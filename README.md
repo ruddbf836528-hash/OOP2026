@@ -59,4 +59,4 @@ public class Helloworld {
     }
 }
 
-![Alt homework images1](./images/homework%20images1.jpg)
+![Alt homework images1](./images/homeworkimages1.jpg)
