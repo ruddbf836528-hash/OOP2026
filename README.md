@@ -64,3 +64,30 @@ public class Helloworld {
 }
 
 ![Alt homework11](./images/homework%20images1.png)
+
+### Homework2
+
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int a = 1;
+        int b = 1;
+        int c;
+
+        System.out.print(a + " ");
+        System.out.print(b + " ");
+
+        for(int i=3; i<=20; i++) {
+
+            c = a + b;
+
+            System.out.print(c + " ");
+
+            a = b;
+            b = c;
+        }
+    }
+}
+
+![Alt homework11](./images/homework%20images2.png)
