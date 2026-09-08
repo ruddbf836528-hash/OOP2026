@@ -70,6 +70,7 @@ public class Helloworld {
 
 ## Homework2
 
+```java
 public class Helloworld {
 
     public static void main(String[] args) {
@@ -92,12 +93,14 @@ public class Helloworld {
         }
     }
 }
+```
 
 ![Alt homework11](./images/homework%20images2.png)
 
 
 ## Homework3
 
+```java
 public class Helloworld {
 
     public static void main(String[] args) {
@@ -117,12 +120,14 @@ public class Helloworld {
         }
     }
 }
+```
 
 ![Alt homework11](./images/homework%20images3.png)
 
 
 ## Homework4
 
+```java
 public class Helloworld {
 
     public static void main(String[] args) {
@@ -140,5 +145,6 @@ public class Helloworld {
         }
     }
 }
+```
 
 ![Alt homework11](./images/homework%20images4.png)
