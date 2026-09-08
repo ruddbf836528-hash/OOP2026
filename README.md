@@ -65,6 +65,7 @@ public class Helloworld {
 
 ![Alt homework11](./images/homework%20images1.png)
 
+
 ## Homework2
 
 public class Helloworld {
@@ -92,6 +93,7 @@ public class Helloworld {
 
 ![Alt homework11](./images/homework%20images2.png)
 
+
 ## Homework3
 
 public class Helloworld {
@@ -115,3 +117,26 @@ public class Helloworld {
 }
 
 ![Alt homework11](./images/homework%20images3.png)
+
+
+## Homework4
+
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int i, j;
+
+        for(j=1; j<=9; j++) {
+
+            for(i=1; i<=9; i++) {
+
+                System.out.print(i + "*" + j + "=" + i*j + "\t");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+![Alt homework11](./images/homework%20images4.png)
