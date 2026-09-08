@@ -2,6 +2,7 @@
 
 ## Homework1
 
+```java
 public class Helloworld {
 
     public static void main(String[] args) {
@@ -62,6 +63,7 @@ public class Helloworld {
         }
     }
 }
+```
 
 ![Alt homework11](./images/homework%20images1.png)
 
