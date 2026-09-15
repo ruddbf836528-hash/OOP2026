@@ -148,3 +148,25 @@ public class Helloworld {
 ```
 
 ![Alt homework11](./images/homework%20images4.png)
+
+
+## Homework5 Gregory–Leibniz series
+
+```java
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        double pi = 0.0;
+
+        for(int k=0; k<1000000; k++) {
+
+            pi = pi + 4.0 * Math.pow(-1, k) / (2*k + 1);
+        }
+
+        System.out.println("원주율 = " + pi);
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images5-1.png)
