@@ -268,3 +268,43 @@ public class Helloworld {
 ```
 
 ![Alt homework11](./images/homework%20images7.png)
+
+
+## Homework8
+
+```java
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int score[][] = new int[30][5];
+
+        for(int i=0; i<30; i++) {
+
+            score[i][4] = 0;
+
+            for(int j=0; j<4; j++) {
+
+                score[i][j] = (int)(Math.random()*101);
+
+                score[i][4] = score[i][4] + score[i][j];
+            }
+        }
+
+
+        for(int i=0; i<30; i++) {
+
+            System.out.print((i+1) + " ");
+
+            for(int j=0; j<5; j++) {
+
+                System.out.print(score[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images8.png)
