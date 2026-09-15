@@ -194,3 +194,36 @@ public class Helloworld {
 ```
 
 ![Alt homework11](./images/homework%20images5-2.png)
+
+
+## Homework6
+
+```java
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int binomial[][] = new int[7][7];
+
+        for(int i=0; i<7; i++) {
+
+            for(int j=0; j<=i; j++) {
+
+                if(j==0 || j==i) {
+                    binomial[i][j] = 1;
+                }
+                else {
+                    binomial[i][j]
+                    = binomial[i-1][j-1] + binomial[i-1][j];
+                }
+
+                System.out.print(binomial[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images6.png)
