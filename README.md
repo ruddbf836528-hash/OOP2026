@@ -227,3 +227,44 @@ public class Helloworld {
 ```
 
 ![Alt homework11](./images/homework%20images6.png)
+
+
+## Homework7
+
+```java
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int data[] = new int[20];
+
+        for(int i=0; i<20; i++) {
+            data[i] = (int)(Math.random()*100);
+        }
+
+
+        for(int i=0; i<19; i++) {
+
+            int min = i;
+
+            for(int j=i+1; j<20; j++) {
+
+                if(data[j] < data[min]) {
+                    min = j;
+                }
+            }
+
+            int temp = data[i];
+            data[i] = data[min];
+            data[min] = temp;
+        }
+
+
+        for(int i=0; i<20; i++) {
+            System.out.println(data[i]);
+        }
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images7.png)
