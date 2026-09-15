@@ -170,3 +170,27 @@ public class Helloworld {
 ```
 
 ![Alt homework11](./images/homework%20images5-1.png)
+
+
+## Homework5 Madhava series
+
+```java
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        double pi = 0.0;
+
+        for(int k=0; k<1000; k++) {
+
+            pi = pi + Math.pow(-1.0/3.0, k) / (2*k + 1);
+        }
+
+        pi = Math.sqrt(12) * pi;
+
+        System.out.println("원주율 = " + pi);
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images5-2.png)
