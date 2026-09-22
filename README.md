@@ -203,20 +203,32 @@ public class Helloworld {
 
     public static void main(String[] args) {
 
-        int binomial[][] = new int[7][7];
+        int i, j, n=10;
 
-        for(int i=0; i<7; i++) {
+        int binomial[][] = new int[n][n];
 
-            for(int j=0; j<=i; j++) {
+        for(i=0; i<n; i++) {
+            binomial[i][0] = binomial[i][i] = 1;
+        }
 
-                if(j==0 || j==i) {
-                    binomial[i][j] = 1;
-                }
-                else {
-                    binomial[i][j]
-                    = binomial[i-1][j-1] + binomial[i-1][j];
-                }
+        for(i=2; i<n; i++) {
+            for(j=1; j<i; j++) {
+                binomial[i][j]
+                        = binomial[i-1][j-1]
+                        + binomial[i-1][j];
+            }
+        }
 
+        printArray(n, binomial);
+    }
+
+    static void printArray(int n, int binomial[][]) {
+
+        int i, j;
+
+        for(i=0; i<n; i++) {
+
+            for(j=0; j<=i; j++) {
                 System.out.print(binomial[i][j] + " ");
             }
 
