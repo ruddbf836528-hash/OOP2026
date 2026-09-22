@@ -157,14 +157,15 @@ public class Helloworld {
 
     public static void main(String[] args) {
 
-        double pi = 0.0;
+        int i, n=100, sign=1;
+        double sum=0;
 
-        for(int k=0; k<1000000; k++) {
-
-            pi = pi + 4.0 * Math.pow(-1, k) / (2*k + 1);
+        for(i=0; i<n; i++) {
+            sum += sign*4./(2.*i+1.);
+            sign *= -1;
         }
 
-        System.out.println("원주율 = " + pi);
+        System.out.println(sum);
     }
 }
 ```
@@ -179,16 +180,15 @@ public class Helloworld {
 
     public static void main(String[] args) {
 
-        double pi = 0.0;
+        int i, n=100, sign=1;
+        double sum=0;
 
-        for(int k=0; k<1000; k++) {
-
-            pi = pi + Math.pow(-1.0/3.0, k) / (2*k + 1);
+        for(i=0; i<n; i++) {
+            sum += sign*1./((2.*i+1.)*Math.pow(3., i));
+            sign *= -1;
         }
 
-        pi = Math.sqrt(12) * pi;
-
-        System.out.println("원주율 = " + pi);
+        System.out.println(Math.sqrt(12)*sum);
     }
 }
 ```
