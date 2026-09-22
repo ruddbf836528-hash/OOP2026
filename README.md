@@ -311,3 +311,154 @@ public class Helloworld {
 
 
 ## Homework10
+
+```java
+public class Histogram {
+
+    public static void main(String[] args) {
+
+        int array_count, max_value, bin_size, display_scale, hist_size;
+
+        if(args.length != 4)
+            return;
+
+        array_count = Integer.parseInt(args[0]);
+        max_value = Integer.parseInt(args[1]);
+        bin_size = Integer.parseInt(args[2]);
+        display_scale = Integer.parseInt(args[3]);
+
+        hist_size = max_value / bin_size;
+
+
+        int[] arr = new int[array_count];
+        int[] hist = new int[hist_size];
+
+
+        for(int i=0; i<array_count; i++) {
+            arr[i] = (int)(Math.random() * max_value);
+        }
+        
+        
+        for(int i=0; i<array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println();
+
+
+        for(int i=0; i<array_count; i++) {
+            hist[arr[i] / bin_size]++;
+        }
+
+
+        for(int i=0; i<hist_size; i++) {
+            System.out.print(hist[i] + " ");
+        }
+
+        System.out.println();
+
+        
+        for(int i=0; i<hist_size; i++) {
+
+            System.out.printf("%d~%d\t",
+                    i * bin_size,
+                    (i + 1) * bin_size - 1);
+
+            for(int j=0; j<hist[i] / display_scale; j++) {
+                System.out.print("#");
+            }
+
+            System.out.println();
+        }
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images10.png)
+
+
+## Homework11
+
+```java
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int array_count;
+
+        if(args.length != 1)
+            return;
+
+        array_count = Integer.parseInt(args[0]);
+
+        int[] arr = new int[array_count];
+
+        for(int i=0; i<array_count; i++) {
+            arr[i] = (int)(Math.random()*100);
+        }
+
+        for(int i=0; i<array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println();
+
+        double sum = 0;
+
+        for(int i=0; i<array_count; i++) {
+            sum += arr[i];
+        }
+
+        System.out.printf("arithmetic mean : = %f\n",
+                sum/array_count);
+
+        double prod = 1;
+
+        for(int i=0; i<array_count; i++) {
+            prod *= arr[i];
+        }
+
+        System.out.printf("geometric mean : = %f\n",
+                Math.pow(prod, (double)1.0/array_count));
+
+        double inverse_sum = 0;
+
+        for(int i=0; i<array_count; i++) {
+            inverse_sum += 1.0/arr[i];
+        }
+
+        System.out.printf("harmonic mean : = %f\n",
+                array_count/inverse_sum);
+
+        for(int i=0; i<array_count-1; i++) {
+
+            int min = i;
+
+            for(int j=i+1; j<array_count; j++) {
+
+                if(arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+
+        double median;
+
+        if(array_count % 2 == 0) {
+            median = (arr[array_count/2-1]
+                    + arr[array_count/2]) / 2.0;
+        }
+        else {
+            median = arr[array_count/2];
+        }
+
+        System.out.printf("median : = %f\n", median);
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images11.png)
