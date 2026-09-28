@@ -474,3 +474,106 @@ public class Helloworld {
 ```
 
 ![Alt homework11](./images/homework%20images11.png)
+
+
+## Homework11
+
+```java
+import java.util.Scanner;
+
+public class Helloworld {
+
+    public static void main(String[] args) {
+
+        int out;
+
+        while(true) {
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("> ");
+
+            String inputString = scanner.nextLine();
+
+            String[] arrOfStr = inputString.split(" ");
+
+            if(arrOfStr.length == 3) {
+
+                int num1 = Integer.parseInt(arrOfStr[0]);
+                int num2 = Integer.parseInt(arrOfStr[2]);
+
+                if(arrOfStr[1].equals("+")) {
+                    out = num1 + num2;
+                    System.out.println(out);
+                }
+                else if(arrOfStr[1].equals("-")) {
+                    out = num1 - num2;
+                    System.out.println(out);
+                }
+                else if(arrOfStr[1].equals("#")) {
+                    out = num1 * num2;
+                    System.out.println(out);
+                }
+                else if(arrOfStr[1].equals("/")) {
+                    out = num1 / num2;
+                    System.out.println(out);
+                }
+            }
+
+            else if(arrOfStr.length == 5) {
+
+                int num1 = Integer.parseInt(arrOfStr[0]);
+                int num2 = Integer.parseInt(arrOfStr[2]);
+                int num3 = Integer.parseInt(arrOfStr[4]);
+
+                String op1 = arrOfStr[1];
+                String op2 = arrOfStr[3];
+
+                if((op1.equals("+") || op1.equals("-"))
+                        && (op2.equals("#") || op2.equals("/"))) {
+
+                    int temp;
+
+                    if(op2.equals("#"))
+                        temp = num2 * num3;
+                    else
+                        temp = num2 / num3;
+
+                    if(op1.equals("+"))
+                        out = num1 + temp;
+                    else
+                        out = num1 - temp;
+
+                    System.out.println(out);
+                }
+
+                else {
+
+                    if(op1.equals("+"))
+                        out = num1 + num2;
+                    else if(op1.equals("-"))
+                        out = num1 - num2;
+                    else if(op1.equals("#"))
+                        out = num1 * num2;
+                    else
+                        out = num1 / num2;
+
+                    if(op2.equals("+"))
+                        out = out + num3;
+                    else if(op2.equals("-"))
+                        out = out - num3;
+                    else if(op2.equals("#"))
+                        out = out * num3;
+                    else
+                        out = out / num3;
+
+                    System.out.println(out);
+                }
+            }
+        }
+    }
+}
+```
+
+![Alt homework11](./images/homework%20images13.png)
+
